@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Customer Address</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+<!-- add customer -->
+<div class="jumbotron" style="width: 30%;margin-left: 30%;">
+
+  <span class="label label-info" style="font-size: 25px;margin-left: 12px;">Add Customer Address</span>
+<hr>
+<form #myForm="ngForm" (ngSubmit)="addAddressDetails(myForm)" role="form">
+
+
+
+<h2>Address Details</h2>
+
+<div class="form-group">
+  <label for="policyHolderId">Customer Id:</label>
+  <input  readonly type="text" ngModel class="form-control" placeholder="{{customerId}}" name="policyHolderId" [(ngModel)]="customerId">
+  </div>
+
+<div class="form-group">
+<label for="addressLine1">Address Line 1:</label>
+<input #addressLine1="ngModel" required="required"  type="text" ngModel class="form-control" placeholder="" name="addressLine1">
+<div class="alert" *ngIf="addressLine1.touched && !addressLine1.valid" >AddressLine1 is required</div>
+</div>
+
+<div class="form-group">
+  <label for="addressLine2">Address Line 2:</label>
+  <input #addressLine2="ngModel" required="required" type="text" ngModel class="form-control" placeholder="" name="addressLine2">
+  <div class="alert" *ngIf="addressLine2.touched && !addressLine2.valid" >AddressLine2 is required</div>
+</div>
+
+<div class="form-group">
+<label for="city">City:</label>
+<input #city="ngModel" required="required" type="text" ngModel class="form-control" placeholder="" name="city">
+<div class="alert" *ngIf="city.touched && !city.valid" >City is required</div>
+</div>
+
+<div class="form-group">
+<label for="district">District:</label>
+<input #district="ngModel" required="required" type="text" ngModel class="form-control" placeholder="" name="district">
+<div class="alert" *ngIf="district.touched && !district.valid" >District is required</div>
+</div>
+
+<div class="form-group">
+<label for="state">State:</label>
+<input #state="ngModel" required="required" type="text" ngModel class="form-control" placeholder="" name="state">
+<div class="alert" *ngIf="state.touched && !state.valid" >State is required</div>
+</div>
+
+<div class="form-group">
+  <label for="zipCode">ZipCode:</label>
+  <input #zipCode="ngModel" required="required" type="text" ngModel class="form-control" placeholder="" name="zipCode">
+  <div class="alert" *ngIf="zipCode.touched && !zipCode.valid" >zipCode is required</div>
+</div>
+
+<button [disabled]="!myForm.valid" type="submit" class="btn btn-primary">Save</button>
+</form>
+</div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

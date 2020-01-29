@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+<!-- add customer -->
+<div class="jumbotron" style="width: 30%;margin-left: 30%;">
+
+  <span class="label label-info" style="font-size: 25px;margin-left: 12px;">Add Health Details</span>
+<hr>
+<form #myForm="ngForm" (ngSubmit)="addHealthDetails(myForm)" role="form">
+
+
+
+<h2>Health Details</h2>
+
+<div class="form-group">
+  <label for="policyHolderId">Customer Id:</label>
+  <input readonly type="text" ngModel class="form-control" placeholder="{{customerId}}" name="policyHolderId" [(ngModel)]="customerId">
+  </div>
+
+<div class="form-group">
+<label for="hSrNo">Sr No.:</label>
+<input type="text" ngModel class="form-control" placeholder="" name="hSrNo">
+</div>
+
+<div class="form-group">
+  <label for="bloodGroup">Blood Group</label>
+  <input type="text" ngModel class="form-control" placeholder="" name="bloodGroup">
+  </div>
+
+<div class="form-group">
+<label for="bmi">BMI</label>
+<input type="text" ngModel class="form-control" placeholder="" name="bmi">
+</div>
+
+<div class="form-group">
+<label for="height">Height:</label>
+<input type="text" ngModel class="form-control" placeholder="" name="height">
+</div>
+
+<div class="form-group">
+<label for="weight">Weight:</label>
+<input type="text" ngModel class="form-control" placeholder="" name="weight">
+</div>
+
+<button type="submit" class="btn btn-primary">Save</button>
+</form>
+</div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

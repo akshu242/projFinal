@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <span class="label label-info" style="font-size: 25px;margin-left: 550px;">Show Customers</span>
+    <hr>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Customer ID</th>
+          <th>Name</th>
+          <th>No Of Pol</th>
+          <th>D.O.B</th>
+          <th>Phone Number</th>
+          <th>Email-ID</th>
+          <th>city</th>
+          <th>Address</th>
+          <th>Policies</th>
+          <th>HealthDetails</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cust of customers">
+          <td>{{cust.custId}}</td>
+          <td>{{cust.fName}} {{cust.lName}}</td>
+          <td>{{cust.noOfPolicies}}</td>
+          <td>{{cust.dob}}</td>
+          <td>{{cust.phNumber}}</td>
+          <td>{{cust.email}}</td>
+          <td *ngIf="!cust.addressDetails" style="color: red;">not added</td>
+          <td *ngIf="cust.addressDetails">{{cust.addressDetails.city}} {{cust.addressDetails.zipCode}}</td>
+
+          <!-- <td>
+            <tr *ngFor="let p of cust.policies">
+                <td>{{p.policyNumber}}</td>
+            </tr>
+          </td> -->
+          <td>
+              <li *ngIf="!cust.addressDetails" class="active"><a routerLink="/add-cust-adddress/{{cust.custId}}" >Add address</a></li>
+        </td>
+        <td>
+            <li class="active"><a routerLink="/add-policy-details/{{cust.custId}}" >Add policies</a></li>
+      </td>
+      <td>
+          <li class="active"><a routerLink="/add-cust-health/{{cust.custId}}" >Add HealthDetails</a></li>
+    </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

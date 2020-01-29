@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+
+
+<!-- agents table -->
+<h1 class="text-center">Agents Information</h1>
+<hr>
+<div class="container">
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th>Agent Id</th>
+        <th>Name</th>
+        <th>No of Policies</th>
+        <th>No of Customers</th>
+        <th>Phone Number</th>
+        <th>City</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let agent of agents">
+
+        <td>{{agent.agentId}}</td>
+        <td>{{agent.fName}}&nbsp;{{agent.lName}}</td>
+        <td>{{agent.noOfPolicies}}</td>
+        <td>{{agent.noOfCustomers}}</td>
+        <td>{{agent.phNumber}}</td>
+        <td>{{agent.city}}</td>
+        <td>
+          <li class="active"><a routerLink="/edit-agent-details/{{agent.agentId}}">Edit</a></li>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
