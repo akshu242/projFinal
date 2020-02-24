@@ -39,11 +39,16 @@ export class DataService {
     return this.http.post(this.agentsUrl, agent);
   }
 
-  editAgentById(agentId , agent) {
+  editAgentById( agentId , agent) {
     console.log(agent);
 
     return this.http.put('http://localhost:8080/liccliaproject/agents/editagent/' + agentId , agent);
   }
+  editCustomerById(custId , customer) {
+    console.log(customer);
+    return this.http.put('http://localhost:8080/liccliaproject/policyHolders/update/' + custId , customer );
+  }
+
 
   getAgentById(agentId) {
     return this.http.get(this.agentsUrl + agentId);
@@ -67,11 +72,6 @@ export class DataService {
     return this.http.get(this.customersUrl + custId);
   }
 
-  editCustomerById(id , customer) {
-    console.log(customer);
-    console.log(id);
-    return this.http.put('http://localhost:8080/liccliaproject/policyHolders/update/' + id , customer );
-  }
 
   addCustomer(agentId , customer) {
     console.log(customer + agentId);

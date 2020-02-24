@@ -24,9 +24,9 @@
           <th>Phone Number</th>
           <th>Email-ID</th>
           <th>city</th>
-          <th>Address</th>
+          <!-- <th>Address</th>
           <th>Policies</th>
-          <th>HealthDetails</th>
+          <th>HealthDetails</th> -->
 
         </tr>
       </thead>
@@ -39,7 +39,7 @@
           <td>{{cust.phNumber}}</td>
           <td>{{cust.email}}</td>
           <td *ngIf="!cust.addressDetails" style="color: red;">not added</td>
-          <td *ngIf="cust.addressDetails">{{cust.addressDetails.city}} {{cust.addressDetails.zipCode}}</td>
+          <td *ngIf="cust.addressDetails">{{cust.addressDetails.city}} <br> {{cust.addressDetails.zipCode}}</td>
 
           <!-- <td>
             <tr *ngFor="let p of cust.policies">
@@ -50,11 +50,17 @@
               <li *ngIf="!cust.addressDetails" class="active"><a routerLink="/add-cust-adddress/{{cust.custId}}" >Add address</a></li>
         </td>
         <td>
-            <li class="active"><a routerLink="/add-policy-details/{{cust.custId}}" >Add policies</a></li>
+            <li  class="active"><a routerLink="/add-policy-details/{{cust.custId}}" >Add policies</a></li>
       </td>
       <td>
-          <li class="active"><a routerLink="/add-cust-health/{{cust.custId}}" >Add HealthDetails</a></li>
+          <li *ngIf="cust.healthDetails" class="active">Already Added</li>
+          <li *ngIf="!cust.healthDetails" class="active"><a routerLink="/add-cust-health/{{cust.custId}}" >Add HealthDetails</a></li>
     </td>
+
+    <td>
+      <li class="active"><a routerLink="/edit-customer-details/{{cust.custId}}">Edit</a></li>
+  </td>
+
         </tr>
       </tbody>
     </table>

@@ -23,7 +23,7 @@ export class EditAgentDetailsComponent implements OnInit {
                 this.service.editAgentById(this.agentId, this.agent).subscribe((result) => {
                   console.log(this.agent);
                   this.router.navigate(['/clia']);
-                })
+                });
                }
 
   ngOnInit() {

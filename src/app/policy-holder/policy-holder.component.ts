@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-policy-holder',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PolicyHolderComponent implements OnInit {
 
-  constructor() { }
+  customer : any;
+  constructor(private auth: AuthService) { }
+  logOut() {
+    this.auth.Logout();
 
+  }
   ngOnInit() {
+    this.customer = JSON.parse(window.sessionStorage.getItem('object'));
+    console.log(this.customer.custId);
+
   }
 
 }

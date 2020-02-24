@@ -35,6 +35,7 @@ login(formData) {
                   // console.log(a);
                   this.router.navigate(['clia']);
               } else {
+                alert('login failed');
                 console.log('login failed');
               }
                   });

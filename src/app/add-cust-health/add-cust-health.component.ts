@@ -34,10 +34,10 @@ export class AddCustHealthComponent implements OnInit {
     this.agent = JSON.parse(window.sessionStorage.getItem('object'));
     this.route.paramMap.subscribe((result) => {
        this.customerId= result.get('custId');
-      console.log(this.customerId);
+       console.log(this.customerId);
 
       let observableResult =
-              this.service.getCustomerById(this.customerId);
+      this.service.getCustomerById(this.customerId);
 
        observableResult.subscribe((recordsFound)=>{
          console.log(recordsFound[0]);

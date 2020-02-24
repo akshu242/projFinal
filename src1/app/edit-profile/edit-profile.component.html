@@ -1,0 +1,41 @@
+
+<div class="container">
+
+  <form #myForm="ngForm" (ngSubmit)="add(myForm)" role="form">
+    <!-- <div class="form-group;" > -->
+      <div class="form-group;" >
+      <label for="name" >Name:</label>
+      <input type="name" ngModel class="form-control" placeholder="Enter name" name="name" >
+       </div>
+<br>
+       <div class="form-group;" >
+        <label for="email">email:</label>
+      <input type="email" ngModel class="form-control" placeholder="Enter Email" name="email">
+    </div>
+
+    <br>
+    <div class="form-group;" >
+      <label for="phone">phone:</label>
+      <input type="phone" ngModel class="form-control" placeholder="Enter Phone" name="phone">
+    </div>
+  <br>
+  <div class="form-group;" >
+    <label for="password">password:</label>
+      <input type="password" ngModel class="form-control" placeholder="Enter password" name="password">
+    </div>
+    <br>
+    <div class="form-group;" >
+      <label for="role">Role:</label>
+      <input type="role" ngModel class="form-control" placeholder="Enter role" name="role">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Update</button>&nbsp;&nbsp;&nbsp;
+
+    <button type="submit" class="btn btn-danger">Cancel</button>
+
+  </form>
+</div>
+
+
+
+

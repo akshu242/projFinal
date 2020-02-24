@@ -18,8 +18,26 @@
     <![endif]-->
   </head>
   <body>
-    <h1 class="text-center">Hello World</h1>
+    <div class="jumbotron">
 
+      <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title" style="text-align: center;font-size: 30px; font-weight: bolder;">My-Profile</h3>
+          </div>
+          <div class="panel-body" style="font-size: 25px;">
+            Customer Id : {{customer.custId}}
+            <hr>
+            Name : <small>{{customer.fName}} {{customer.mName}} {{customer.lName}}</small>
+            <hr style="width: 400px;margin-left: 0px;">
+            Email-ID : <small >{{customer.email}}</small>
+            <hr style="width: 400px;margin-left: 0px;">
+            Total Policies : {{customer.noOfPolicies}}
+          </div>
+          <div class="panel-body">
+
+          </div>
+      </div>
+    </div>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->

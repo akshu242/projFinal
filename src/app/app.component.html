@@ -25,9 +25,12 @@
          <li class="active">
            <a routerLink="/contact-us"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Contact-Us</a>
          </li>
-         <li class="">
+         <li class="active">
+            <a routerLink="/view-plans"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> View-Plans</a>
+          </li>
+         <!-- <li class="">
            <a routerLink="/request-meet"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> Meet Request</a>
-         </li>
+         </li> -->
        </ul>
 
        <ul class="nav navbar-right" style="font-weight: bold;font-family: 'Times New Roman', Times, serif;font-size: 19px;">
@@ -73,7 +76,7 @@
               </li>
 
               <li class="active">
-                <a routerLink="/show-plans"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Show-Plans</span> </a>
+                <a routerLink="/view-plans"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Show-Plans</span> </a>
               </li>
 
               <li class="active">
@@ -113,7 +116,7 @@
           </li>
 
           <li class="active">
-            <a routerLink="/show-plans"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Show-Plans</span> </a>
+            <a routerLink="/view-plans"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Show-Plans</span> </a>
           </li>
 
           <li class="active">
@@ -135,7 +138,7 @@
 <div *ngIf="service.isCustomer()">
   <!-- for cust -->
   <div class="navbar" style="background-color: honeydew;box-shadow: lightgray 1px 1px 10px;">
-    <a class="navbar-brand" routerLink="/agent"><span class="glyphicon glyphicon-" aria-hidden="true"></span> My-Details</a>
+    <a class="navbar-brand" routerLink="/policy-holder"><span class="glyphicon glyphicon-" aria-hidden="true"></span> My-Details</a>
     <ul class="nav navbar-nav">
 
 
@@ -172,17 +175,12 @@
 
 
 
-<div class="panel uk-panel-box-secondary-hover" style="margin-top:33em;box-shadow: black 1px 2px 2px;text-align: right;">
+<div class="panel uk-panel-box-secondary-hover" style="margin-top:43em;box-shadow: black 1px 2px 2px;text-align: right;">
     <div class="panel-footer">
         <h5>@ LIC CLIA Portal</h5>
     </div>
 </div>
 
-<footer class="footer mt-auto py-5">
-  <div class="container">
-    <span class="glyphicon glyphicon-book " style="text-align: center; font-weight: 700;color: blue;"> Zindagi Ke Sath Bhi Zindagi Ke Bad Bhi</span>
-  </div>
-</footer>
     <!-- jQuery -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <!-- Bootstrap JavaScript -->

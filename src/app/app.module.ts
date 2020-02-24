@@ -89,7 +89,7 @@ import { AddCustHealthComponent } from './add-cust-health/add-cust-health.compon
       {path: 'policy-holder', component: PolicyHolderComponent , canActivate: [AuthService]} ,
       {path: 'edit-clia-details', component: EditCliaDetailsComponent , canActivate: [AuthService]},
       {path: 'edit-agent-details/:agentId', component: EditAgentDetailsComponent ,  canActivate: [AuthService]},
-      {path: 'edit-customer-details', component: EditCustomerDetailsComponent , canActivate: [AuthService]},
+      {path: 'edit-customer-details/:custId', component: EditCustomerDetailsComponent , canActivate: [AuthService]},
       {path: 'add-agent', component: AddAgentComponent , canActivate: [AuthService]},
       {path: 'add-customer/:agentId', component: AddCustomerComponent , canActivate: [AuthService]},
       {path: 'add-policy-details/:custId' , component: AddPolicyDetailsComponent},
@@ -104,8 +104,8 @@ import { AddCustHealthComponent } from './add-cust-health/add-cust-health.compon
       {path: 'show-cust-by-aid/:agentId', component: ShowCustByAIdComponent , canActivate: [AuthService]},
       {path: 'view-plans', component: ViewPlansComponent },
       {path: 'show-pol-by-cid/:custId', component: ShowPolByCidComponent , canActivate: [AuthService]},
-      {path: 'add-cust-adddress/:custId', component: AddCustAdddressComponent },
-      {path: 'add-cust-health/:custId', component: AddCustHealthComponent },
+      {path: 'add-cust-adddress/:custId', component: AddCustAdddressComponent , canActivate: [AuthService]},
+      {path: 'add-cust-health/:custId', component: AddCustHealthComponent, canActivate: [AuthService] },
 
 
     ]),

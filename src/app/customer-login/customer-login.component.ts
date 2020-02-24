@@ -37,6 +37,7 @@ export class CustomerLoginComponent implements OnInit {
                   // console.log(a);
                   this.router.navigate(['policy-holder']);
               } else {
+                alert('login failed');
                 console.log('login failed');
               }
                   });
